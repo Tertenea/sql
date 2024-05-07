@@ -13,10 +13,10 @@ delete from pkiviorg where id=10;
 delete from pkiviorg where id=15;
 
 step 5
-select id,last_name,car_make,car_year from pkiviorg;
+select id, last_name, car_make, car_year from pkiviorg;
 
 step 6
-select pkiviorg.first_name, pkiviorg.last_name, pkiviorg.car_make, pkiviorg.car_model, pkiviorg.car_year, pkiviorg.car_price from pkiviorg where pkiviorg.last_name like 'k%' order by pkiviorg.car_year desc limit 10; 
+select first_name, last_name, car_make, car_model, car_year, .car_price from pkiviorg where last_name like 'k%' order by car_year desc limit 10; 
 
 step 7
 select * from pkiviorg where car_make='Honda' or car_make='Toyota' and car_price>20000;
