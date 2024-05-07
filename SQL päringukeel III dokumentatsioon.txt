@@ -1,0 +1,22 @@
+step 1
+sqlite3 epood_pkiviorg.db
+
+step 2
+select * from pkiviorg where car_year<2000 order by car_year asc limit 20;
+
+step 3
+select avg(car_year), max(car_price) from pkiviorg;
+
+step 4
+select car_model from pkiviorg order by car_year desc limit 5;
+
+step 5
+select * from pkiviorg where car_make='Ford' order by car_price desc limit 5;
+
+step 6
+delete from pkiviorg where car_year<2000 and car_make='Honda';
+
+step 7
+.mode csv
+.output pkiviorg_epood.csv
+select * from pkiviorg;
